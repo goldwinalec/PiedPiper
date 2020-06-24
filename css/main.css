@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -5,7 +15,7 @@ body {
   position: relative;
 }
 
-.main-header {
+.header {
   background-color: #007765;
   width: 100%;
   padding: 20px 0;
@@ -13,8 +23,9 @@ body {
   top: 0;
 }
 
-.header-content {
+.header__content {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -24,29 +35,54 @@ body {
   padding: 0 55px;
 }
 
-.header-nav {
+.header__nav {
   display: inline-block;
   font-size: 24px;
   line-height: 45px;
   color: #fff;
 }
 
-.nav-link {
+.header__nav-link {
   color: #fff;
   text-decoration: none;
   margin-right: 8px;
 }
 
-.nav-link:hover {
+.header__nav-link:hover {
   color: #eee;
   text-decoration: none;
   transition: 0.2s ease-in;
 }
 
-/*  */
-.header-text {
-  background-color: #ddd;
-  background-image: url("../img/image.jpg");
+.header__nav-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  list-style: none;
+}
+
+.header__nav-item {
+  margin-right: 23px;
+  position: relative;
+}
+
+.header__nav-item:last-child {
+  margin-right: 0;
+}
+
+.header__nav-item:not(:last-child)::after {
+  content: "";
+  width: 2px;
+  height: 28px;
+  bottom: 8px;
+  right: -8px;
+  background-color: #ffffff;
+  position: absolute;
+}
+
+.piper-net {
+  background-color: rgb(5, 63, 65);
+  background-image: url("../img/pipernet-bg.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -55,43 +91,48 @@ body {
   margin-top: 89px;
 }
 
-.header-title {
+.piper-net__title {
   font-size: 74px;
+  line-height: 80px;
   font-weight: 500;
   text-align: center;
   color: #fff;
 }
 
 /*  */
-.main {
+.the-problem {
   background: #eee;
   padding: 45px 0 90px;
 }
 
-.text-title {
+.the-problem__title,
+.introduction__title,
+.team__title {
   text-align: center;
   color: #007765;
   font-size: 64px;
-  margin: 0 0 15px;
+  margin-top: 0;
+  margin-bottom: 15px;
   font-weight: 500;
 }
 
-.main-text {
+.the-problem__text {
+  margin: 0;
   font-size: 32px;
   line-height: 37px;
   font-weight: normal;
 }
 
-/*  */
 .tagline {
-  background-image: url('../img/image (2).png');
+  background-color: rgb(9, 128, 175);
+  background-image: url("../img/tagline-bg.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   padding: 125px 0;
 }
 
-.tagline__text {
+.tagline__title {
   font-style: italic;
   font-weight: 500;
   font-size: 48px;
@@ -102,52 +143,57 @@ body {
   margin: 0 auto;
 }
 
-.intro {
-  box-sizing: border-box;
+.introduction {
   background-color: #fff;
   padding: 45px 0 90px;
 }
 
-.intro img {
+.introduction__image {
   float: left;
   margin-right: 48px;
 }
 
-.p_intro {
-  padding-top: 48px;
+.introduction__text {
+  font-size: 32px;
+  line-height: 37px;
+  font-weight: normal;
+  margin: 0;
 }
-
-/*  */
 .team {
   background-color: #eee;
-  padding: 45px 0 120px;
+  padding: 45px 0 30px;
 }
 
-.team-members {
+.team__members {
+  margin-top: 56px;
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-  width: 100%;
 }
 
-.member {
+.team__member {
   text-align: center;
   flex-basis: 33%;
-  padding: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 82px;
   box-sizing: border-box;
 }
 
-.member__name {
+.team__name {
   margin: 0;
   margin-top: 12px;
   font-weight: bold;
   font-size: 24px;
+  line-height: 28px;
   color: #007765;
 }
 
-.member__role {
+.team__role {
   font-style: italic;
   font-size: 18px;
+  line-height: 21px;
   color: #000;
 }
 
@@ -157,10 +203,32 @@ body {
   text-align: center;
 }
 
-.footer__text {
+.footer__copyright {
   color: #fff;
   font-size: 18px;
   line-height: 21px;
   max-width: 540px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 991px) {
+  .team__name {
+    font-size: 20px;
+  }
+  .team__role {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .team__member {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .team__member {
+    flex-basis: 100%;
+    margin-bottom: 40px;
+  }
 }
