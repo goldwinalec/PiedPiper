@@ -8,6 +8,7 @@ $(document).ready(function () {
   $(".header__nav-link").on("click", function () {
     $(".header__nav").toggleClass("active");
     $(".header__m-button-line").toggleClass("active");
+    $("body").toggleClass("no-scroll");
   });
 
   $(".top-btn").removeClass("visible");
