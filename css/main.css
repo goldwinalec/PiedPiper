@@ -12,7 +12,6 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   background: #eee;
-  position: relative;
   overflow-x: hidden;
 }
 
@@ -26,6 +25,7 @@ body {
   padding: 20px 0;
   position: sticky;
   top: 0;
+  z-index: 999;
 }
 
 .header__content {
@@ -106,6 +106,7 @@ body {
 }
 
 .piper-net {
+  position: relative;
   background-color: rgb(5, 63, 65);
   background-image: url("../img/pipernet-bg.jpg");
   background-size: cover;
@@ -125,6 +126,7 @@ body {
 
 /*  */
 .the-problem {
+  position: relative;
   background: #eee;
   padding: 45px 0 90px;
 }
@@ -169,6 +171,7 @@ body {
 }
 
 .introduction {
+  position: relative;
   background-color: #fff;
   padding: 45px 0 90px;
 }
@@ -185,6 +188,7 @@ body {
   margin: 0;
 }
 .team {
+  position: relative;
   background-color: #eee;
   padding: 45px 0 30px;
 }
@@ -258,6 +262,17 @@ body {
 
 .top-btn.visible {
   display: block;
+}
+
+.the-problem__title::before,
+.introduction__title::before,
+.team__title::before {
+  display: block;
+  content: " ";
+  margin-top: -133px;
+  height: 133px;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 991px) {
