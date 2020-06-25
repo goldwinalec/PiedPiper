@@ -373,6 +373,12 @@ body {
   .header__nav {
     top: 70px;
   }
+  .the-problem__title::before,
+  .introduction__title::before,
+  .team__title::before {
+    margin-top: -115px;
+    height: 115px;
+  }
   .piper-net {
     padding: 50px 0;
   }
