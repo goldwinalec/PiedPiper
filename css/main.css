@@ -64,7 +64,7 @@ body {
 }
 
 .header__m-button-line:first-child.active {
-  transform: translateY(0.39em) rotate(45deg);
+  transform: translateY(0.4em) rotate(45deg);
 }
 
 .header__m-button-line:nth-child(2).active {
