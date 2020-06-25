@@ -23,6 +23,7 @@ body {
   background-color: #007765;
   width: 100%;
   padding: 20px 0;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -368,6 +369,9 @@ body {
 @media screen and (max-width: 576px) {
   .header__image {
     width: 110px;
+  }
+  .header__nav {
+    top: 70px;
   }
   .piper-net {
     padding: 50px 0;
