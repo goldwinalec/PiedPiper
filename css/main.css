@@ -64,7 +64,7 @@ body {
 }
 
 .header__m-button-line:first-child.active {
-  transform: translateY(0.4em) rotate(45deg);
+  transform: translateY(0.41em) rotate(45deg);
 }
 
 .header__m-button-line:nth-child(2).active {
@@ -200,6 +200,7 @@ body {
   font-weight: normal;
   margin: 0;
 }
+
 .team {
   position: relative;
   background-color: #eee;
@@ -293,6 +294,7 @@ body {
     max-width: 90%;
     padding: 0 10px;
   }
+
   .header__nav {
     display: none;
     position: fixed;
@@ -327,9 +329,11 @@ body {
   .header__m-button {
     display: flex;
   }
+
   .team__name {
     font-size: 20px;
   }
+
   .team__role {
     font-size: 16px;
   }
@@ -339,27 +343,33 @@ body {
   .piper-net {
     padding: 145px 0;
   }
+
   .team__member {
     flex-basis: 50%;
   }
+
   .piper-net__title {
     font-size: 60px;
   }
+
   .the-problem__title,
   .introduction__title,
   .team__title {
     font-size: 40px;
   }
+
   .the-problem__text,
   .introduction__text {
     font-size: 23px;
     line-height: 26px;
   }
+
   .introduction__image {
     width: 90px;
     height: 90px;
     margin-right: 25px;
   }
+
   .tagline__title {
     font-size: 30px;
     line-height: 35px;
@@ -370,45 +380,56 @@ body {
   .header__image {
     width: 110px;
   }
+
   .header__nav {
     top: 70px;
   }
+
   .the-problem__title::before,
   .introduction__title::before,
   .team__title::before {
     margin-top: -115px;
     height: 115px;
   }
+
   .piper-net {
     padding: 50px 0;
   }
+
   .piper-net__title {
     font-size: 36px;
   }
+
   .the-problem__title,
   .introduction__title,
   .team__title {
     font-size: 30px;
   }
+
   .the-problem__text,
   .introduction__text {
     font-size: 18px;
     line-height: 21px;
   }
+
   .tagline__title {
     font-size: 25px;
     line-height: 30px;
   }
+
   .tagline {
     padding: 50px 0;
   }
+
   .team__name {
     font-size: 18px;
   }
+
   .team__member {
     flex-basis: 100%;
     margin-bottom: 40px;
   }
+
   .footer__copyright {
     max-width: 90%;
     font-size: 16px;
